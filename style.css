@@ -1,0 +1,160 @@
+:root {
+  --c-light: #fefefc;
+  --c-dark: #100604;
+  --c-lighter-text: #302624;
+  --c-primary: #9B1D20;
+  --c-secondary: #180B5B;
+  --c-link: #009FB7;
+  --c-visited: #0d0630;
+  --c-highlight: #e9eced;
+  --c-aside: #E6CB9A;
+  --c-grey: #ccc;
+
+  --f-title: 'Asap Condensed', 'Arial Narrow', Arial, sans-serif;
+  --f-body: 'Asap', Arial, sans-serif;
+
+  font-size: 18px;
+  font-family: var(--f-body);
+  font-weight: 400;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+::selection { 
+  background-color: var(--c-highlight);
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  overflow: auto;
+  color: var(--c-dark);
+}
+
+main {
+  flex-grow: 1;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+  padding: .5rem;
+  font-size: 14px;
+}
+
+a {
+  color: var(--c-link);
+  text-decoration: none;
+  border-bottom: 1px solid currentColor;
+  outline: none;
+  cursor: pointer;
+}
+a:visited {
+  color: var(--c-visited);
+}
+a:focus {
+  background-color: var(--c-link);
+  color: var(--c-light);
+  border-color: var(--c-link);
+}
+a:hover {
+  border-bottom-width: 2px;
+}
+a:active {
+  background-color: var(--c-visited);
+  color: var(--c-light);
+  border-color: var(--c-visited);
+}
+
+h1, h2, h3, h4, h5, h6, #date-input {
+  font-family: var(--f-title);
+  color: var(--c-primary);
+  font-weight: 500;
+  margin-top: .75em;
+  margin-bottom: .75em;
+  text-align: center;
+}
+
+h1.title {
+  margin-top: 1rem;
+  margin-bottom: .5rem;
+}
+
+h1.title + .subtitle {
+  margin-top: .5rem;
+}
+
+h2, #date-input {
+  font-size: 1.5em;
+}
+
+#date-input {
+  margin: 0;
+  border: 0;
+  border-bottom: 2px solid var(--c-link);
+}
+
+#date-input:focus {
+  background-color: var(--c-link);
+  color: var(--c-light);
+  outline: none;
+}
+
+#date-input::selection {
+  background-color: var(--c-light);
+  color: var(--c-link);
+}
+
+span.titled[title] {
+  text-decoration: underline;
+  text-decoration-style: dotted;
+  cursor: help;
+  text-decoration-thickness: 2px;
+  text-decoration-color: var(--c-link);
+  text-underline-offset: .1em;
+}
+
+ul#observation-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+ul#observation-list li {
+  margin: .5em 0;
+  line-height: 1.5;
+}
+
+button {
+  background: var(--c-highlight);
+  border: 0;
+  border-radius: 0;
+  color: var(--c-dark);
+  line-height: 1;
+  font-size: 1rem;
+  cursor: pointer;
+  padding: .25em .5em;
+}
+
+button[disabled] {
+  color: var(--c-grey);
+  cursor: not-allowed;
+}
+
+button:not([disabled]):hover, button:not([disabled]):focus {
+  background: var(--c-link);
+  color: var(--c-light);
+}
+
+button:not([disabled]):active {
+  background: var(--c-visited);
+}

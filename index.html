@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title data-trans="title">Easterizer</title>
+    <link rel="icon" href="assets/icon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Asap:wght@400&family=Asap+Condensed:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="modulepreload" href="script.js">
+    <link rel="modulepreload" href="easterizer.js">
+    <link rel="modulepreload" href="assets/lune.js">
+    <link rel="modulepreload" href="assets/julian.js">
+    <link rel="modulepreload" href="assets/seasons.js">
+    <meta property="og:title" content="Easterizer" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://bucaneer.github.io/easterizer/assets/icon.png" />
+    <meta property="og:description" content="turns any date into a moveable feast like Easter" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:locale:alternate" content="lt_LT" />
+  </head>
+  <body>
+    <header>
+      <h1 class="title" data-trans="title">Easterizer</h1>
+      <h4 class="subtitle" data-trans="subtitle">turns any date into a moveable feast like Easter.</h4>
+    </header>
+    <main>
+      <p data-trans="date">This date:</p>
+      <input id="date-input" type="date" name="base_date">
+      <p data-trans="is">is</p>
+      <h2><span id="date-description">...</span></h2>
+      <div id="observation-block" style="display: none">
+        <p data-trans="observed">and is observed on:</p>
+        <button class="observation-prepend">⏶ ⏶ ⏶</button>
+        <ul id="observation-list">
+        </ul>
+        <button class="observation-append">⏷ ⏷ ⏷</button>
+      </div>
+    </main>
+    <footer>
+      <div class="language-selector">
+        <span data-trans="language">Language</span>:
+        <a href="#lang:lt" title="Lithuanian / lietuvių">LT</a>
+        <a href="#lang:en" title="English / anglų">EN</a>
+      </div>
+      <div class="source">
+        <a href="https://github.com/bucaneer/easterizer" data-trans="open_source">Open source</a>
+      </div>
+    </footer>
+    <script type="module" src="script.js"></script>
+  </body>
+</html>
