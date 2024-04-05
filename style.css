@@ -138,7 +138,6 @@ button {
   background: var(--c-highlight);
   border: 0;
   border-radius: 0;
-  color: var(--c-dark);
   line-height: 1;
   font-size: 1rem;
   cursor: pointer;
@@ -146,12 +145,16 @@ button {
 }
 
 button > svg {
+  fill: var(--c-dark);
   vertical-align: middle;
 }
 
 button[disabled] {
-  color: var(--c-grey);
   cursor: not-allowed;
+}
+
+button[disabled] > svg {
+  fill: var(--c-grey);
 }
 
 button:not([disabled]):hover, button:not([disabled]):focus {
