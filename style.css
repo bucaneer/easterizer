@@ -145,6 +145,10 @@ button {
   padding: .25em .5em;
 }
 
+button > svg {
+  vertical-align: middle;
+}
+
 button[disabled] {
   color: var(--c-grey);
   cursor: not-allowed;
@@ -152,7 +156,10 @@ button[disabled] {
 
 button:not([disabled]):hover, button:not([disabled]):focus {
   background: var(--c-link);
-  color: var(--c-light);
+}
+
+button:not([disabled]):hover > svg, button:not([disabled]):focus > svg {
+  fill: var(--c-light);
 }
 
 button:not([disabled]):active {
